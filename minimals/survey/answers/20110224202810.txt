@@ -1,0 +1,10 @@
+bear 18 bear
+beaver 19 armadillo
+camel 14 camel
+elephant 12 elephant
+giraffe 11 ostrich
+gorilla 6 hippopotamous
+hippo 7 bison
+horse 5 dog
+lion 7 rhinocerous
+rhino 8 warthog

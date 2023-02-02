@@ -1,0 +1,10 @@
+bear 12 Kangaroo 
+beaver 12 Dinosaur 
+camel 7 Camel
+elephant 15 Elephant 
+giraffe 9 Kangaroo 
+gorilla 8 Elephant 
+hippo 18 Rhino 
+horse 18 Donkey 
+lion 12 Lion
+rhino 10 Buffalo 

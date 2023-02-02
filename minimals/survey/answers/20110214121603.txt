@@ -1,0 +1,5 @@
+bear 14 tiger
+beaver 16 unknown
+camel 12 camel
+elephant 13 elephant
+giraffe 19 unknown

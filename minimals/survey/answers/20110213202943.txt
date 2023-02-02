@@ -1,0 +1,4 @@
+bear 7 A duplo block bear
+beaver 7 A lego anteater
+camel 10 That is obviously a camel
+elephant 13 From the side an elephant, from the back a gorilla

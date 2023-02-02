@@ -1,0 +1,4 @@
+bear 10 elephant
+beaver 20 cameleon
+camel 6 dinosaure
+elephant 12 elephant

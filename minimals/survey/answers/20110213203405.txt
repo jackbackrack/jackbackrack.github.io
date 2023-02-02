@@ -1,0 +1,10 @@
+bear 13 unknown
+beaver 11 unknown
+camel 7 unknown
+elephant 7 unknown
+giraffe 13 A n emu. No, an ostrich? Perhaps an ibis?
+gorilla 7 Jacques Costeau emerging from a deep sea dive...
+hippo 6 A chimpanze zygote
+horse 14 A ruminant of sorts. 
+lion 4 A malignant neoplasm of the liver
+rhino 9 A wildebison

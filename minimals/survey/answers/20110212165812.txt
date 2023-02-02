@@ -1,0 +1,10 @@
+bear 20 bear
+beaver 24 beaver
+camel 6 gorilla
+elephant 6 turtle
+giraffe 10 kangaroo
+gorilla 7 panda
+hippo 17 rhino
+horse 10 ram
+lion 7 lion
+rhino 12 rhino

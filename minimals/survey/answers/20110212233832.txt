@@ -1,0 +1,10 @@
+bear 18 hippo
+beaver 24 beaver
+camel 11 camel
+elephant 16 elephant
+giraffe 13 dinosaur raptor
+gorilla 6 unknown
+hippo 8 aardvark
+horse 15 horse
+lion 6 turtle
+rhino 5 media lab

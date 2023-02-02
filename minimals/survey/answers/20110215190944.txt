@@ -1,0 +1,10 @@
+bear 17 sloth
+beaver 5 rhinocerous
+camel 6 camel
+elephant 15 elephant
+giraffe 14 giraffe
+gorilla 11 chimpanzie
+hippo 9 cow
+horse 12 dog
+lion 17 lion
+rhino 6 rhinocerous

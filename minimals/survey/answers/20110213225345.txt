@@ -1,0 +1,10 @@
+bear 10 bear
+beaver 9 aardvark
+camel 11 camel
+elephant 5 unknown
+giraffe 14 unknown
+gorilla 18 gorilla
+hippo 17 hippopotamus
+horse 6 frog
+lion 15 lion
+rhino 5 unknown

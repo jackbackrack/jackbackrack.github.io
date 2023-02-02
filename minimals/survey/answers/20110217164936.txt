@@ -1,0 +1,10 @@
+bear 6 Koala Bear
+beaver 8 elmo
+camel 13 camel
+elephant 7 elephant
+giraffe 15 llama
+gorilla 11 porcupine
+hippo 17 rhinocerous
+horse 18 horse
+lion 13 unknown
+rhino 12 dog

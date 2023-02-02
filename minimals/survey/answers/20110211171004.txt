@@ -1,0 +1,10 @@
+bear 10 bear
+beaver 20 dinosaur
+camel 10 camel
+elephant 9 elephant
+giraffe 13 ostrich
+gorilla 16 gorilla
+hippo 17 aardvark
+horse 11 dog
+lion 15 lion
+rhino 13 hyena

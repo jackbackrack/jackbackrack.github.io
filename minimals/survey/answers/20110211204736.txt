@@ -1,0 +1,10 @@
+bear 11 Bear
+beaver 12 Lizard
+camel 15 Camel
+elephant 5 Turtle
+giraffe 5 Snake
+gorilla 7 Frog
+hippo 8 Elephant
+horse 19 Donkey/zebra
+lion 8 Lion
+rhino 12 Rhino

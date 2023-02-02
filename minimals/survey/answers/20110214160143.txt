@@ -1,0 +1,2 @@
+bear 12 turtle
+beaver 25 rat

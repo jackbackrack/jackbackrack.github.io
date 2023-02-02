@@ -1,0 +1,10 @@
+bear 16 capybara
+beaver 25 armadillo
+camel 14 camel
+elephant 14 elephant
+giraffe 16 giraffe
+gorilla 8 gorilla
+hippo 11 buffalo
+horse 10 sheep
+lion 12 lion
+rhino 21 rhino

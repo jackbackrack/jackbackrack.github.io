@@ -1,0 +1,6 @@
+bear 12 elephant
+beaver 17 elephant
+camel 6 kangaroo
+elephant 8 moose
+giraffe 4 ostrich
+gorilla 6 unknown

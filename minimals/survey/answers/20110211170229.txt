@@ -1,0 +1,10 @@
+bear 15 bear
+beaver 8 human crawling
+camel 15 camel
+elephant 5 unknown
+giraffe 13 ostrich
+gorilla 8 gorilla
+hippo 12 elephant
+horse 10 unknown
+lion 10 cat
+rhino 14 unknown

@@ -1,0 +1,10 @@
+bear 11 bear
+beaver 22 some dinosour
+camel 13 camel
+elephant 10 elephant
+giraffe 16 jiraffe
+gorilla 11 turtle
+hippo 8 ant bear thingy
+horse 8 cow
+lion 13 a.kldjs;
+rhino 16 rhino

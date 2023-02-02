@@ -1,0 +1,10 @@
+bear 16 Bear
+beaver 17 Ankylosaurus
+camel 10 Camel
+elephant 12 Elephant
+giraffe 11 Dodo Bird
+gorilla 16 Gorilla
+hippo 14 Sheep
+horse 6 Nope
+lion 18 Lion
+rhino 18 Rhino, Kindof

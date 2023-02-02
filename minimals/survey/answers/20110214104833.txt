@@ -1,0 +1,10 @@
+bear 11 hippopatomus
+beaver 6 inchworm
+camel 4 unknown
+elephant 11 elephant
+giraffe 14 t rex or giraffe
+gorilla 14 gorilla
+hippo 18 rhinocerus
+horse 16 horse
+lion 10 german shepard
+rhino 20 hippo

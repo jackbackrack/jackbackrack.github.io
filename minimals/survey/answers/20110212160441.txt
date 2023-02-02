@@ -1,0 +1,4 @@
+bear 17 cephalopod
+beaver 23 ctenophore
+camel 10 diatom
+elephant 7 paramecium

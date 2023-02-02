@@ -1,0 +1,10 @@
+bear 19 bear
+beaver 20 dinosaur
+camel 11 camel
+elephant 10 tree
+giraffe 9 cat
+gorilla 18 gorilla
+hippo 14 anteater
+horse 18 horse
+lion 13 lion
+rhino 10 you

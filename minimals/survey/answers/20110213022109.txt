@@ -1,0 +1,3 @@
+bear 11 unknown
+beaver 22 dragon
+camel 6 unknown

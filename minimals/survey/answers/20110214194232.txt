@@ -1,0 +1,10 @@
+bear 6 elephant
+beaver 17 beaver
+camel 11 camel
+elephant 9 fat chick
+giraffe 7 sea horse
+gorilla 18 gorilla
+hippo 12 pig
+horse 5 polar bear
+lion 4 armadillo
+rhino 7 lion

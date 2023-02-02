@@ -1,0 +1,10 @@
+bear 7 elephant
+beaver 7 mouse
+camel 9 camel
+elephant 9 elephant
+giraffe 18 giraffe
+gorilla 10 gorilla
+hippo 11 aardvark
+horse 14 horse
+lion 11 lion
+rhino 15 rhino

@@ -1,0 +1,10 @@
+bear 16 polar bear
+beaver 4 truck
+camel 14 camel
+elephant 6 no
+giraffe 18 maybe giraffe maybe peacock
+gorilla 11 goomba
+hippo 9 truck
+horse 9 maybe elephant?
+lion 18 lion, but silly
+rhino 7 no

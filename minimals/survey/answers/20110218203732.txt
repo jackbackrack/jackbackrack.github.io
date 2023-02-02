@@ -1,0 +1,10 @@
+bear 21 Polar Bear
+beaver 11 Beaver
+camel 12 Camel
+elephant 7 Elephant
+giraffe 14 Camel
+gorilla 14 Gorilla
+hippo 9 Nothing
+horse 15 Horse
+lion 16 Lion
+rhino 16 Hippo

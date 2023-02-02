@@ -1,0 +1,11 @@
+bear 7 buffalo
+beaver 13 porqupine
+camel 12 camel
+elephant 5 unknown
+giraffe 10 flamingo
+gorilla 10 anteater
+hippo 18 rhinosaurus
+horse 19 mule
+lion 16 liion
+rhino 21 warthog
+rhino 21 unknown

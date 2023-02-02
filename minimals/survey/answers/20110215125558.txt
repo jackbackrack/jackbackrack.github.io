@@ -1,0 +1,10 @@
+bear 9 camel
+beaver 9 dog
+camel 7 dog
+elephant 11 dog
+giraffe 12 dog
+gorilla 6 dog
+hippo 6 dog
+horse 6 dog
+lion 4 dog
+rhino 7 dog

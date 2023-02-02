@@ -1,0 +1,10 @@
+bear 20 polar bear
+beaver 6 human baby
+camel 16 camel
+elephant 7 elephant
+giraffe 4 dinosaur
+gorilla 16 gorilla
+hippo 18 hippo
+horse 16 zebra
+lion 14 lion
+rhino 15 unknown

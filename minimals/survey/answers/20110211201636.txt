@@ -1,0 +1,11 @@
+bear 16 polar bear
+beaver 15 stegasauraus
+camel 16 camel
+elephant 9 elephant
+giraffe 7 asp
+gorilla 16 gorilla
+hippo 8 elephant
+horse 16 zebra
+lion 5 unknown
+rhino 13 lion
+rhino 13 lion

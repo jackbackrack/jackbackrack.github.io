@@ -1,0 +1,10 @@
+bear 7 Elephant
+beaver 8 Lizard??
+camel 8 Gorilla
+elephant 8 Elephant
+giraffe 7 dinosaur??
+gorilla 8 unknown
+hippo 11 Hippo??
+horse 7 horse
+lion 9 DOG
+rhino 14 unknown

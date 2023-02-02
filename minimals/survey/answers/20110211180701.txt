@@ -1,0 +1,8 @@
+bear 6 lion cub
+beaver 21 dinosaur
+camel 13 camel
+elephant 8 elephant
+giraffe 19 giraffe
+gorilla 11 frog
+hippo 13 worthog
+horse 17 horse

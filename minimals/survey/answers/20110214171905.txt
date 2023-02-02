@@ -1,0 +1,10 @@
+bear 19 bear
+beaver 16 dinosaur
+camel 5 blockosaurus?
+elephant 13 Elephant
+giraffe 17 giraffe
+gorilla 16 gorilla
+hippo 8 unknown
+horse 19 horsey!
+lion 16 unknown
+rhino 5 unknown

@@ -1,0 +1,10 @@
+bear 20 polar bear
+beaver 25 beaver
+camel 5 unknown
+elephant 11 elephant
+giraffe 14 giraffe
+gorilla 9 gorilla
+hippo 12 boar
+horse 11 cow
+lion 7 lion
+rhino 12 rhinoceros

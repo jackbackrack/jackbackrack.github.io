@@ -1,0 +1,10 @@
+bear 16 bear
+beaver 19 porcupine
+camel 6 camel
+elephant 9 elephant
+giraffe 15 emu
+gorilla 6 frog
+hippo 9 hippo
+horse 18 bull
+lion 10 lion
+rhino 15 hippo

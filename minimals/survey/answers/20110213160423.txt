@@ -1,0 +1,10 @@
+bear 11 a poodle
+beaver 23 an ankliosaurus
+camel 5 camel
+elephant 16 elephant
+giraffe 4 dog
+gorilla 11 stegasaurus
+hippo 9 rhino
+horse 16 horse
+lion 10 lion
+rhino 10 bufallo

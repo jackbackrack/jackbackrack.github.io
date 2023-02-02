@@ -1,0 +1,10 @@
+bear 14 human
+beaver 19 triceratops
+camel 14 camel
+elephant 5 amoeba
+giraffe 15 giraffe
+gorilla 10 larva
+hippo 6 buffalo
+horse 9 elephant
+lion 7 lion
+rhino 20 rhinoceros

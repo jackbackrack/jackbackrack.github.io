@@ -1,0 +1,10 @@
+bear 6 polar bear
+beaver 9 stegasaurus
+camel 12 camel
+elephant 15 elephant
+giraffe 5 stork
+gorilla 8 gorilla
+hippo 12 rhinosaurus
+horse 15 zebra
+lion 18 lion
+rhino 14 rhinosaurus

@@ -1,0 +1,10 @@
+bear 10 Bear
+beaver 7 Beaver
+camel 12 Camel
+elephant 8 Elephant
+giraffe 10 Vulture
+gorilla 12 unknown
+hippo 6 rhino
+horse 17 Donkey
+lion 8 Lion
+rhino 17 rhino

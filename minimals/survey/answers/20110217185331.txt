@@ -1,0 +1,10 @@
+bear 15 BEAR
+beaver 21 OTTER
+camel 13 CAMEL
+elephant 11 ELEPHANT
+giraffe 11 PRAIRIE DOG
+gorilla 16 GORILLA
+hippo 12 WOOLLY MAMMOTH
+horse 11 unknown
+lion 18 LION
+rhino 7 BOAR

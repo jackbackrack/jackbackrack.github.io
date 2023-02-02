@@ -1,0 +1,10 @@
+bear 10 bear
+beaver 12 stegosaurus
+camel 5 unknown
+elephant 16 elephant
+giraffe 4 crane
+gorilla 9 gorilla
+hippo 6 anteater
+horse 10 bighorn sheep
+lion 5 cartoon sperm whale
+rhino 12 rhinocerous

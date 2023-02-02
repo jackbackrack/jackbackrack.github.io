@@ -1,0 +1,10 @@
+bear 15 Bear
+beaver 4 unknown
+camel 11 camel
+elephant 7 unknown
+giraffe 6 snake
+gorilla 9 gorilla
+hippo 10 unknown
+horse 14 elephant
+lion 5 unknown
+rhino 8 unknown

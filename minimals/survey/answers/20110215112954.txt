@@ -1,0 +1,10 @@
+bear 9 bear
+beaver 13 bloodhound, in the process of tracking something
+camel 15 camel
+elephant 16 elephant
+giraffe 17 giraffe
+gorilla 5 fat cat
+hippo 11 grazing steer, fat enough for steak time
+horse 9 camel, in the process of kneeling to be loaded
+lion 13 griffin
+rhino 19 rhino

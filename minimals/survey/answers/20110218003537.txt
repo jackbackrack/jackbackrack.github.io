@@ -1,0 +1,10 @@
+bear 8 monkey on one side and an elephant on th other
+beaver 23 beaver
+camel 4 unknown
+elephant 9 rabbit
+giraffe 18 Lama
+gorilla 7 gorilla
+hippo 9 rino
+horse 15 horse
+lion 9 ant eater
+rhino 10 buffalo

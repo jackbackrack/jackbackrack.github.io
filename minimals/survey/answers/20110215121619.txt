@@ -1,0 +1,10 @@
+bear 13 a person crawling
+beaver 15 stegasaurus
+camel 14 camel
+elephant 10 elephant
+giraffe 4 toucan
+gorilla 18 definately me
+hippo 14 bull
+horse 8 Uzi
+lion 4 giant flying head of zardoz
+rhino 20 rhino

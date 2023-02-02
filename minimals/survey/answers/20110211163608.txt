@@ -1,0 +1,11 @@
+bear 13 bear
+bear 13 turtle
+beaver 9 human
+camel 8 camel
+elephant 12 elephant
+giraffe 10 t-rex
+gorilla 18 gorilla
+hippo 17 anteater
+horse 5 bear
+lion 11 dog
+rhino 4 bear

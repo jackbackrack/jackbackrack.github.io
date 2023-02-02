@@ -1,0 +1,13 @@
+bear 17 anteater
+beaver 9 platipus
+camel 12 camel
+camel 12 camel
+elephant 12 elephant
+giraffe 12 giraffe
+gorilla 12 gorilla
+hippo 16 buffalo
+horse 16 horse
+lion 13 lion
+lion 13 lion
+lion 13 lion
+rhino 21 rhino

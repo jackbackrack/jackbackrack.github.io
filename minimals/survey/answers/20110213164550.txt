@@ -1,0 +1,4 @@
+bear 8 dog
+beaver 12 moose
+camel 4 camel
+elephant 5 giraffe

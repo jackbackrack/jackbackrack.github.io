@@ -1,0 +1,10 @@
+bear 14 bear
+beaver 9 beaver
+camel 8 camel
+elephant 12 elephant
+giraffe 11 half bird/half mammal
+gorilla 13 chimp
+hippo 17 rhino
+horse 5 mountain dog
+lion 16 lion
+rhino 17 hippo

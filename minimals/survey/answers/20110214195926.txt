@@ -1,0 +1,10 @@
+bear 19 big dog
+beaver 17 porky-pine (aka, porcupine)
+camel 7 camel
+elephant 13 elephant
+giraffe 9 sitting cat
+gorilla 18 guerilla gorilla
+hippo 17 hippo
+horse 19 Goat!  my favorite!
+lion 7 unknown
+rhino 9 unknown

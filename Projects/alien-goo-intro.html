@@ -1,0 +1,245 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Alien GOO Introduction</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body bgcolor="#0099FF">
+<h1><font size="+7" face="Arial, Helvetica, sans-serif">alien goo</font><font face="Arial, Helvetica, sans-serif"><br>
+    <em>a lightweight c embedding facility</em><br>
+jonathan bachrach</font></h1>
+<h1><font face="Arial, Helvetica, sans-serif">introduction</font></h1>
+<p><font face="Arial, Helvetica, sans-serif">a big challenge in dynamic language
+    design is how best to interface to c code. problems stem from type, syntax,
+    and semantic mismatches between languages. many solutions have been proposed
+    through the years. we first briefly present four c extensions facilities
+    for python. we then introduce a simple
+    yet powerful
+    c embedding facility for goo which permits direct inlining of c inside of
+    goo code escaping back into goo as needed.</font></p>
+<h1><font face="Arial, Helvetica, sans-serif">previous work</font></h1>
+<p><font face="Arial, Helvetica, sans-serif"><em>swig</em> is a language-neutral
+    semi-automatic header parsing mechanism that produces separate c files that
+    get compiled
+    and linked into your application. users
+    are allowed to tailor  type mappings according to their application. </font></p>
+<p><font face="Arial, Helvetica, sans-serif"><em>ctypes</em>  is a python
+    facility that allows one to import dlls, to enumerate their exported symbols,
+    and to manually specify their type interfaces with a special python-based
+    c type system. </font></p>
+<p><font face="Arial, Helvetica, sans-serif"><em>pyinline</em> permits the definition
+    of c code fragments as python objects
+      to be executed later. c snippets are specified as python strings. </font></p>
+<p><font face="Arial, Helvetica, sans-serif">finally,
+          <em>pyrex</em> allows the intermixing of c and python code implicitly
+          requesting c
+          code by defining
+        python variables with c types and using them within expressions. in this
+          way, loops can be completely performed in low overhead c if all loop
+          related
+          variables
+          are defined
+          with c types.
+        </font></p>
+<p><font face="Arial, Helvetica, sans-serif">the following presents a pros/cons
+    evaluation of these four facilities:</font></p>
+<table width="75%">
+  <tr>
+    <td><font face="Arial, Helvetica, sans-serif"><strong>name</strong></font></td>
+    <td><font face="Arial, Helvetica, sans-serif"><strong>pros</strong></font></td>
+    <td><font face="Arial, Helvetica, sans-serif"><strong>cons</strong></font></td>
+  </tr>
+  <tr>
+    <td><font face="Arial, Helvetica, sans-serif">swig</font></td>
+    <td><font face="Arial, Helvetica, sans-serif">semi-automatic</font></td>
+    <td><font face="Arial, Helvetica, sans-serif">heavyweight</font></td>
+  </tr>
+  <tr>
+    <td><font face="Arial, Helvetica, sans-serif">ctypes</font></td>
+    <td><font face="Arial, Helvetica, sans-serif">loads dlls</font></td>
+    <td><font face="Arial, Helvetica, sans-serif">another c type system</font></td>
+  </tr>
+  <tr>
+    <td><font face="Arial, Helvetica, sans-serif">pyinline</font></td>
+    <td><font face="Arial, Helvetica, sans-serif">lighter weight</font></td>
+    <td><font face="Arial, Helvetica, sans-serif">cumbersome and no python escapes</font></td>
+  </tr>
+  <tr>
+    <td><font face="Arial, Helvetica, sans-serif">pyrex</font></td>
+    <td><font face="Arial, Helvetica, sans-serif">even lighter weight</font></td>
+    <td><font face="Arial, Helvetica, sans-serif">whole other python dialect</font></td>
+  </tr>
+</table>
+<p><font face="Arial, Helvetica, sans-serif">in summary, either the solutions
+    are too heavyweight or too complicated, where the weight is measured in terms
+    of space and speed as well as amount of extra
+    glue code and the complication is measured in terms of amount extra mechanism
+    and nuisance to use. pyrex is the most similar in spirit in terms of mixing
+    c and python code, but it introduces a whole other c type system and makes
+    compilation
+dependent on  the types of variables.</font></p>
+<h1><font face="Arial, Helvetica, sans-serif">the alien gooway</font></h1>
+<p><font face="Arial, Helvetica, sans-serif">what we think you really want to
+    do is quite simply be able to inline c code directly into goo, escaping back
+    into goo when necessary, relying on c for
+      its type system
+      instead of having to mirror it in goo. this approach is simpler than pyrex
+      in that the execution proceeds either entirely in c or goo and the distinction
+      is
+      syntactically obvious. inlining c turns out to be quite straightforward
+    and appropriate for goo because goo relies heavily on a c backend (including
+    during
+    dynamic evaluation).</font></p>
+<h1><font face="Arial, Helvetica, sans-serif">c statements</font></h1>
+<p><font face="Arial, Helvetica, sans-serif">as a running example, consider the
+    construction of a simple goo layer on top of a 2d subset of opengl. we start
+    by  defining a goo method for a
+          simplified
+  version of initializing the graphics system:</font></p>
+<pre>(dm gl-setup ()
+  #{ glutInitWindowSize( 640, 480 ); })</pre>
+<p><font face="Arial, Helvetica, sans-serif">where the <font size="-1" face="Courier New, Courier, mono">#{
+      ... }</font> form
+escapes to c executing a series of c statements and evaluates to false.</font></p>
+<h1><font face="Arial, Helvetica, sans-serif">goo escapes</font></h1>
+<p><font face="Arial, Helvetica, sans-serif">next i define a drawing function
+    as follows:</font></p>
+<pre>(dm gl-vertex (x|&lt;flo&gt; y|&lt;flo&gt;) 
+  #{ glVertex3f($x, $y); })</pre>
+<p><font face="Arial, Helvetica, sans-serif">where</font><font face="Arial, Helvetica, sans-serif"> the <font face="Courier New, Courier, mono">$</font> operator
+    escapes back into goo evaluating the subsequent sexpression (ala unquote
+    in a quasiquote expression). unfortunately, in this case, the
+          <font face="Courier New, Courier, mono">x</font> and <font face="Courier New, Courier, mono">y</font> variables
+          contain goo format floats and must first be exported (i.e., unboxed)
+          to c format as follows:</font></p>
+<pre>(dm gl-vertex (x|&lt;flo&gt; y|&lt;flo&gt;)
+  #{ glVertex3f($(to-c x), $(to-c y)); })</pre>
+<p><font face="Arial, Helvetica, sans-serif">where <font face="Courier New, Courier, mono">to-c</font> unboxes the float. <font face="Courier New, Courier, mono">to-c</font> methods are defined for all the basic
+                    goo value types (e.g., <font face="Courier New, Courier, mono">&lt;log&gt;</font>, <font face="Courier New, Courier, mono">&lt;chr&gt;</font>, <font face="Courier New, Courier, mono">&lt;int&gt;</font>, <font face="Courier New, Courier, mono">&lt;flo&gt;</font> and <font face="Courier New, Courier, mono">&lt;str&gt;</font>).
+              furthermore, users can define their own <font face="Courier New, Courier, mono">to-c</font> methods.<br>
+        <br>
+      unfortunately, embedding direct calls to <font face="Courier New, Courier, mono">to-c</font> is verbose and thus we introduce
+                    a shorthand '<font face="Courier New, Courier, mono">@</font>s' which is equivalent to <font face="Courier New, Courier, mono">$(to-c
+                    s)</font>. now <font face="Courier New, Courier, mono">gl-vertex</font> becomes:</font></p>
+<pre>(dm gl-vertex (x|&lt;flo&gt; y|&lt;flo&gt;)
+  #{ glVertex3f(@x, @y); })</pre>
+<p><font face="Arial, Helvetica, sans-serif">in more advanced situations, the <font face="Courier New, Courier, mono">$</font> operator
+    can also be used to assign and create pointers to goo variables (as shown
+    below in the macros' section).</font></p>
+<h1><font face="Arial, Helvetica, sans-serif">c expressions</font></h1>
+<p><font face="Arial, Helvetica, sans-serif">often times users will need to get
+    values back from c in a functional style. for this we introduce the c expression <font face="Courier New, Courier, mono">#ex{
+            ... }</font> which is the same as the
+            c statement form except that its value is the value of the enclosed
+            c expression and where the x modifier in the <font face="Courier New, Courier, mono">#ex(
+            ... )</font> specifies the way to interpret
+            the expression as a goo value. valid modifiers are <font face="Courier New, Courier, mono">i</font> for <font face="Courier New, Courier, mono">&lt;int&gt;</font>, <font face="Courier New, Courier, mono">f</font> for <font face="Courier New, Courier, mono">&lt;flo&gt;</font>, <font face="Courier New, Courier, mono">s</font> for <font face="Courier New, Courier, mono">&lt;str&gt;</font>, <font face="Courier New, Courier, mono">c</font> for <font face="Courier New, Courier, mono">&lt;chr&gt;</font>, <font face="Courier New, Courier, mono">b</font> for <font face="Courier New, Courier, mono">&lt;log&gt;</font>,
+            and <font face="Courier New, Courier, mono">l</font> for <font face="Courier New, Courier, mono">&lt;loc&gt;</font>.
+    for example, one can grab an integer c macro constant as follows:</font></p>
+<pre>(dv $gl-line-loop #ei{ GL_LINE_LOOP })</pre>
+<h1><font face="Arial, Helvetica, sans-serif">top level c</font></h1>
+<p><font face="Arial, Helvetica, sans-serif">top level c definitions can be defined
+    at goo top level with <font face="Courier New, Courier, mono">#{
+        }</font>. for
+    example, a callback can be defined as follows:</font></p>
+<pre>#{ int gl_idle(int x) { $(gl-idle); } }</pre>
+<p><font face="Arial, Helvetica, sans-serif">this can also be used to introduce
+  structure definitions, typedefs, includes, etc. </font></p>
+<h1><font face="Arial, Helvetica, sans-serif">macros</font></h1>
+<p><font face="Arial, Helvetica, sans-serif">now suppose that one wants to define
+    a goo layer to a large and regular c library. for example, consider writing
+    a bignum module using the gnu multiprecision library (aka gmp). we show
+    how alien goo can be used in conjunction with macros, greatly amplifying
+    its power. we start by defining the bignum class in goo and goo to gmp
+    and gmp to
+    goo conversion
+    functions in embedded c at top-level. from there we would start defining
+    each of the goo arithmetic methods. let's start with addition:</font></p>
+<pre>
+(dm + (x|&lt;bignum&gt; y|&lt;bignum&gt; =&gt; &lt;int&gt;)  
+  (let ((res 0))
+    #{ mpz_t z;
+       mpz_init_zero(z);
+       mpz_add(z, bignum_to_mpz($x), bignum_to_mpz($y));
+       $res = mpz_to_goo(z); }
+    res))</pre>
+<p><font face="Arial, Helvetica, sans-serif">now given that we're going to be
+    defining a large number of these methods, it makes sense to invent some
+    macro machinery. first, let's make returning values easier in c's statement
+    oriented world:</font></p>
+<pre>(ds with-returning (,res ,@body)
+  `(let ((,res #f)) ,@body ,res))
+</pre>
+<p><font face="Arial, Helvetica, sans-serif">making the original look as follows:</font></p>
+<pre>
+(dm + (x|&lt;bignum&gt; y|&lt;bignum&gt; =&gt; &lt;int&gt;)  
+  (with-returning res
+    #{ mpz_t z;
+       mpz_init_zero(z);
+       mpz_add(z, bignum_to_mpz($x), bignum_to_mpz($y));
+       $res = mpz_to_goo(z); }))</pre>
+<p><font face="Arial, Helvetica, sans-serif">it turns out that a large number
+    of the bignum methods are going to have similar form starting with gmp variable
+    initialization, goo specific body, and then conversion back to goo. we can
+    thus make a body
+    definining macro:</font></p>
+<pre>(ds with-gmp-returning (,z ,body)
+  (let ((res (gensym))
+        (zc  (to-str z)))
+    `(with-returning ,res
+       #{ mpz_t $,zc; 
+          mpz_init_zero(z);
+          $,body
+          $,res = mpz_to_goo($,zc); })))
+</pre>
+<p><font face="Arial, Helvetica, sans-serif">notice how quasiquote's unquote
+    works inside an embedded c form: it follows a goo escape turning back on
+    goo evaluation. the unquoted goo expression becomes more embedded c if it
+    evaluates to a string otherwise it is evaluated at runtime in goo. now our
+    original addition method
+becomes:</font></p>
+<pre>
+(dm + (x|&lt;bignum&gt; y|&lt;bignum&gt; =&gt; &lt;int&gt;)  
+  (with-gmp-returning z
+    #{  mpz_add(z, bignum_to_mpz($x), bignum_to_mpz($y)); }))    
+</pre>
+<p><font face="Arial, Helvetica, sans-serif">it turns out that a large number
+    of bignum methods are going to have an even more constrained form that only
+    differs between arithmetic functions in the gmp function to be called. we
+    can thus finally define a method
+defining macro as follows:</font></p>
+<pre>(ds def-b-b (,name ,c-fun)
+  `(dm ,name (x|&lt;bignum&gt; y|&lt;bignum&gt; =&gt; &lt;int&gt;)
+     (with-gmp-returning z
+       #{ $,c-fun(z, bignum_to_mpz($x), bignum_to_mpz($y)); })))
+</pre>
+<p><font face="Arial, Helvetica, sans-serif">the addition method can now be defined
+more declaratively and succinctly as:</font></p>
+<pre>(def-b-b + &quot;mpz_add&quot;)
+</pre>
+<p><font face="Arial, Helvetica, sans-serif">from here, we can define the other
+method defining macros for the mixed type inputs (e.g., fixnum x bignum).</font></p>
+<h1><font face="Arial, Helvetica, sans-serif">conclusions</font></h1>
+<p><font face="Arial, Helvetica, sans-serif">we have introduced a lightweight
+    c embedding facility for goo making simple c call outs easy, c interfaces
+    simple and more complicated interfaces manageable. we have  shown how
+    alien goo can be used in conjunction with
+    macros making
+    it
+    considerably
+    more
+    powerful.
+    this facility
+    can be used to define interfaces in a declarative manner, while  avoiding
+    excess interface layers, combining calls, type conversions and goo specific
+    operations. all of these features makes goo/x an extremely lightweight and
+    powerful c interface mechanism. the major limitations with goo/x are that
+    it relies on a c compiler and some amount of compilation to c, does not do
+    error checking on the embedded c code, and still requires a certain amount
+    of manual intervention. </font></p>
+<h1><font face="Arial, Helvetica, sans-serif">acknowledgements</font></h1>
+<p><font face="Arial, Helvetica, sans-serif">james knight provided the original
+    inspiration and has provided helpful feedback along the way.</font></p>
+</body>
+</html>

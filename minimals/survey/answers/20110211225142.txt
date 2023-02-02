@@ -1,0 +1,10 @@
+bear 9 bear
+beaver 14 beaver
+camel 6 one legged short tail cat
+elephant 15 elephant
+giraffe 10 squirrel
+gorilla 4 mmm...brick man
+hippo 7 ardvaark
+horse 15 horse
+lion 9 lego lion
+rhino 5 cow

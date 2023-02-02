@@ -1,0 +1,10 @@
+bear 9 HIPPO
+beaver 4 WHALE
+camel 10 CAMAL
+elephant 13 ELEPHANT
+giraffe 4 FLAMINGO
+gorilla 13 GORILLA
+hippo 12 EEYORE
+horse 4 ZEBRA
+lion 11 DOG
+rhino 4 RHINO

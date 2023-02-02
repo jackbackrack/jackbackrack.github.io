@@ -1,0 +1,10 @@
+bear 10 bear
+beaver 9 drunk human
+camel 13 joe camel
+elephant 14 elephant
+giraffe 5 snake
+gorilla 16 gorilla
+hippo 6 buffalo
+horse 15 horse
+lion 4 turtle
+rhino 15 rhino

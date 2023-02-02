@@ -1,0 +1,10 @@
+bear 8 bison
+beaver 8 frog
+camel 15 camel
+elephant 15 elephant
+giraffe 9 kangaroo
+gorilla 4 unknown
+hippo 6 unknown
+horse 11 goat
+lion 6 unknown
+rhino 17 rhinocerous

@@ -1,0 +1,4 @@
+bear 21 Bear
+beaver 17 Dinosaur 
+camel 9 Camel
+elephant 14 Elephant 

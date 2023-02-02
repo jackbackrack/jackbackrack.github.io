@@ -1,0 +1,10 @@
+bear 10 Bear
+beaver 22 Porcupine
+camel 6 unknown
+elephant 9 unknown
+giraffe 19 Giraffe
+gorilla 5 unknown
+hippo 16 Hippopotam
+horse 17 Donkey
+lion 14 Lion
+rhino 17 Moose

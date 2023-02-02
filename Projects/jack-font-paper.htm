@@ -1,0 +1,141 @@
+<html>
+<head>
+<title>3x3Font Paper</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body bgcolor="#9999FF" text="#000000">
+<div align="center"> 
+  <p><font face="Arial, Helvetica, sans-serif" size="7"><b><i>the 3x3Font Story<br>
+    </i></b></font><b><i><font face="Arial, Helvetica, sans-serif" size="6">JackBackRack</font></i></b><br>
+    <i><font face="Arial, Helvetica, sans-serif" size="5">13Feb03</font></i></p>
+  <p align="left"><i><font face="Arial, Helvetica, sans-serif">the story begins 
+    with my experimentation with scalable graphics and my desire to have fonts 
+    play well within my simple sandbox. so first, i needed an easily transformable 
+    font. one way to achieve that is to use fonts describable by strokes (aka 
+    vectors). </font></i></p>
+  <p align="left"><i><font face="Arial, Helvetica, sans-serif">secondly, in order 
+    to keep my sanity, i needed a font that could be easily specified. i didn't 
+    want to write yet another font editor. clearly postscript and truetype fonts 
+    are not easily specified. they are readily available but involve interminable 
+    file formats and third-party libraries issues. </font></i></p>
+  <p align="left"><i><font face="Arial, Helvetica, sans-serif">now these two goals 
+    seemed at odds, but it did give me an opportunity to rethink and simplify 
+    fonts. what is the simplest possible font anyways? can we do better than that 
+    nasty but classic alphanumeric 16 segment LED font:</font></i></p>
+  <p align="center"><img src="alphanumeric-led-font.jpg" width="200" height="309"></p>
+  <p align="left"><i><font face="Arial, Helvetica, sans-serif">we could start 
+    with the basic 3x3 grid as in the alphanumeric font:</font></i></p>
+  <p align="center"><img src="grid-jack-font.jpg" width="200" height="200"></p>
+  <p align="left"><i><font face="Arial, Helvetica, sans-serif">this seems to be 
+    about the simplest possible structure with which to operate. in order to simplify 
+    the font beyond the alphanumeric font, we could disallow diagonals. having 
+    12 horizontal/vertical segments that can be on or off yields a total of 4096 
+    possible glyphs.</font></i></p>
+  <p align="left"><i><font face="Arial, Helvetica, sans-serif">in the JACKfont, 
+    glyphs are constructed according to the following rules. a legal glyph consists 
+    of (1) a series of strokes with endpoints on the 3x3 grid, and (2) strokes 
+    are either horizontal or vertical. the following is an attempt to generate 
+    an uppercase alphabet, digits, and punctuation using these restrictions:</font></i></p>
+  <p align="center"><img src="amb-jack-font-400.jpg" width="400" height="400"></p>
+  <p align="left"><i><font face="Arial, Helvetica, sans-serif">corresponding to 
+    the following characters:</font></i></p>
+  <p align="center"><font face="Courier New, Courier, mono" size="6"><b>ABCDEFGH<br>
+    IJKLMNOP<br>
+    QRSTUVWX<br>
+    YZ012345<br>
+    6789=*+-<br>
+    _%|?;,.:<br>
+    /\()&lt;&gt;{}<br>
+    </b> </font></p>
+  <p align="left"><i><font face="Arial, Helvetica, sans-serif">(as an aside, i 
+    would like to mention that this is a work in progress and that i'm not entirely 
+    happy with the glyphs for </font></i><font face="Arial, Helvetica, sans-serif"><font face="Courier New, Courier, mono">&lt;&gt;</font></font><i><font face="Arial, Helvetica, sans-serif">,</font></i><font face="Arial, Helvetica, sans-serif"><font face="Courier New, Courier, mono"> 
+    {}</font></font><i><font face="Arial, Helvetica, sans-serif"> and most importantly 
+    colon.) now the most striking thing about this font is that that several characters 
+    are ambiguous under the simplest implementation of these restrictions:</font></i><font face="Arial, Helvetica, sans-serif"><font face="Courier New, Courier, mono">B8</font></font><i><font face="Arial, Helvetica, sans-serif">, 
+    </font></i><font face="Arial, Helvetica, sans-serif"><font face="Courier New, Courier, mono">DO0</font></font><i><font face="Arial, Helvetica, sans-serif">, 
+    </font></i><font face="Arial, Helvetica, sans-serif"><font face="Courier New, Courier, mono">KHZ</font></font><i><font face="Arial, Helvetica, sans-serif">, 
+    </font></i><font face="Arial, Helvetica, sans-serif"><font face="Courier New, Courier, mono">AR</font></font><i><font face="Arial, Helvetica, sans-serif">, 
+    </font></i><font face="Arial, Helvetica, sans-serif"><font face="Courier New, Courier, mono">UV</font></font><i><font face="Arial, Helvetica, sans-serif">, 
+    and </font></i><font face="Arial, Helvetica, sans-serif"><font face="Courier New, Courier, mono">Z2</font></font><i><font face="Arial, Helvetica, sans-serif">. 
+    on the other hand, this weakness could be a strength by giving the reader 
+    a certain pleasure in disambiguating glyphs from context. in order to get 
+    a feeling for this consider the following example of a few words spelled out 
+    with this font:</font></i></p>
+  <p align="center"><img src="amb-jack-font-ex-400.jpg" width="400" height="400"></p>
+  <p align="left"><i><font face="Arial, Helvetica, sans-serif">now although glyphs 
+    can often be disambiguated by context, in other settings, such as typing a 
+    single glyph by itself, it is imperative to have glyphs be self-identifying. 
+    fortunately, we can add disambiguating marks in keeping with our original 
+    rules. in particular, we can disambiguate the font by adding selective horizontal 
+    or vertical marks to all but one of the members of ambiguous glyph groups. 
+    the following is one possible unambiguous version of the above font:</font></i></p>
+  <p align="center"><img src="unamb-jack-font-400.jpg" width="400" height="400"></p>
+  <p align="left"><i><font face="Arial, Helvetica, sans-serif">and the same words 
+    spelled out with it:</font></i></p>
+  <p align="center"><img src="unamb-jack-font-ex-400.jpg" width="400" height="411"></p>
+  <p align="left"><i><font face="Arial, Helvetica, sans-serif">we can now read 
+    letters a bit easier at the expensive of learning some slightly exotic glyphs. 
+    i also experimented with dropping parts of glyphs, but that strayed from an 
+    until then implicit rule of keeping the JACKfont glyphs blocky and centered.</font></i></p>
+  <p align="left"><i><font face="Arial, Helvetica, sans-serif">lowercase letters 
+    can be added in a variety of ways. first, the simplest way is to construct 
+    them as shrunken upper case letters. unfortunately, this makes them ambiguous. 
+    this leads to the second way which is to shrink them but add either an underbar 
+    or overbar. third, and probably most challenging, is to handcraft an entire 
+    new set of lowercase glyphs. the 3x3 grid constraint combined with the centering 
+    aesthetic appears to be daunting for these smaller glyphs.</font></i></p>
+  <p align="left"><i><font face="Arial, Helvetica, sans-serif">here is my first 
+    attempt at creating lowercase glyphs: </font></i></p>
+  <p align="center"><img src="jack-font-lower-400.jpg" width="400" height="400"></p>
+  <p align="left"><i><font face="Arial, Helvetica, sans-serif"> some of the glyphs 
+    (e.g., </font></i><font face="Courier New, Courier, mono">a</font><i><font face="Arial, Helvetica, sans-serif">, 
+    </font></i><font face="Arial, Helvetica, sans-serif"> <font face="Courier New, Courier, mono"> 
+    e</font></font><i><font face="Arial, Helvetica, sans-serif">, </font></i><font face="Arial, Helvetica, sans-serif"><font face="Courier New, Courier, mono">g</font></font><i><font face="Arial, Helvetica, sans-serif">, 
+    </font></i><font face="Arial, Helvetica, sans-serif"> <font face="Courier New, Courier, mono"> 
+    p</font></font><i><font face="Arial, Helvetica, sans-serif">, </font></i><font face="Arial, Helvetica, sans-serif"><font face="Courier New, Courier, mono">q</font></font><i><font face="Arial, Helvetica, sans-serif">, 
+    and </font></i><font face="Courier New, Courier, mono">y</font><i><font face="Arial, Helvetica, sans-serif">) 
+    appear twice as high. it has a certain quirky charm though. other glyphs are 
+    somewhat challenging to read (e.g., </font></i><font face="Courier New, Courier, mono">j</font><i><font face="Arial, Helvetica, sans-serif">, 
+    </font></i><font face="Arial, Helvetica, sans-serif"> <font face="Courier New, Courier, mono"> 
+    l</font></font><i><font face="Arial, Helvetica, sans-serif">, and </font></i><font face="Courier New, Courier, mono">z</font><i><font face="Arial, Helvetica, sans-serif">), 
+    but are not completely inscrutable. </font></i></p>
+  <p align="left"><i><font face="Arial, Helvetica, sans-serif">next i tried shrinking 
+    the big letters and created the following lowercase font:</font></i></p>
+  <p align="center"><img src="jack-font-even-lower-400.jpg" width="400" height="400"></p>
+  <p align="left"><i><font face="Arial, Helvetica, sans-serif">now i think the 
+    problem glyphs are <font face="Courier New, Courier, mono">g</font> and <font face="Courier New, Courier, mono">p</font> 
+    and <font face="Courier New, Courier, mono">q</font> still appear extra tall. 
+    it does though have a pretty regular internal consistency. </font></i></p>
+  <p align="left"><i><font face="Arial, Helvetica, sans-serif">unfortunately, 
+    the letters are now inconsistent in overall area, that is, some glyphs have 
+    bigger squares than each other (e.g., </font></i><font face="Courier New, Courier, mono">a</font><i><font face="Arial, Helvetica, sans-serif"> 
+    versus <font face="Courier New, Courier, mono">b</font>). the following is 
+    a variation which attempts to even out their areas:</font></i></p>
+  <p align="center"><img src="jack-font-equal-lower-400.jpg" width="400" height="400"></p>
+  <p align="left"><i><font face="Arial, Helvetica, sans-serif">it could be that 
+    this font is just a bit too hard to read. more experience will tell.</font></i></p>
+  <p align="left"><i><font face="Arial, Helvetica, sans-serif">having glyphs be 
+    based on a 3x3 grid makes it relatively easy to specify the glyphs. we start 
+    by labelling the grid points using the row and column labels from below:</font></i></p>
+  <p align="center"><i><img src="grid-jack-font.jpg" width="200" height="200"></i></p>
+  <p align="left"><i><font face="Arial, Helvetica, sans-serif"> for example, the 
+    lower left grid point would be <font face="Courier New, Courier, mono">LB</font> 
+    and the center point would be <font face="Courier New, Courier, mono">CC</font>. 
+    a series of points can be strung together and represented as a string. these 
+    strings describe the path of a pen. for example, an <font face="Courier New, Courier, mono">O</font> 
+    can be described as &quot;<font face="Courier New, Courier, mono">LBLTRTRBLB;</font>&quot; 
+    where a semicolon is a pen up command and the stroke starts by default with 
+    the pen down.</font></i></p>
+  <p align="left"><i><font face="Arial, Helvetica, sans-serif">finally, characters 
+    can be easily skinned by growing the dimensions of each of its constituent 
+    vectors into rectangles. this is particularly easy because each of the vectors 
+    is restricted to being either horizontal or vertical. shadows can be added 
+    by layering two skinnings of the same or different scale:</font></i></p>
+  <p align="center"><font size="+1"><img src="skinned-jack-glyph.jpg" width="200" height="205"></font></p>
+  <p align="left"><font size="+1"><i><font face="Arial, Helvetica, sans-serif">i 
+    would like to thank brian knep for advice and support.</font></i></font></p>
+  </div>
+</body>
+</html>

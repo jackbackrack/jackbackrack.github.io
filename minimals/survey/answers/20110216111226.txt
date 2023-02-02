@@ -1,0 +1,10 @@
+bear 7 elephant
+beaver 4 unknown
+camel 13 camel
+elephant 16 elephant
+giraffe 8 dog
+gorilla 14 the hulk
+hippo 6 unknown
+horse 10 top is changing
+lion 6 rino
+rhino 9 buffalo

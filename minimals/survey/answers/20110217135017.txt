@@ -1,0 +1,10 @@
+bear 17 Tiger
+beaver 9 Dinosaur
+camel 9 Camel
+elephant 14 Elephant
+giraffe 9 Cat
+gorilla 15 Gorilla
+hippo 17 Hippo
+horse 15 Horse
+lion 15 Lion
+rhino 9 Rhino

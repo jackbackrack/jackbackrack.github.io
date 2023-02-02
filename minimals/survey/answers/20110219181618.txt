@@ -1,0 +1,10 @@
+bear 17 tibour
+beaver 21 beaver
+camel 10 camel
+elephant 13 elephant
+giraffe 19 giraff
+gorilla 18 gorilla
+hippo 13 rhinoceros
+horse 16 horse
+lion 19 lion
+rhino 15 dog

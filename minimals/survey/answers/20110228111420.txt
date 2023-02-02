@@ -1,0 +1,11 @@
+bear 15 a lego like  hippo
+beaver 18 dragon
+camel 13 dromedary
+elephant 12 unknown
+giraffe 15 dog
+gorilla 11 unknown
+gorilla 11 porcupine ???
+hippo 10 unknown
+horse 16 horse
+lion 7 unknown
+rhino 6 lion

@@ -1,0 +1,10 @@
+bear 16 (polar or grizzly) bear
+beaver 10 stegasaurus
+camel 16 dromedary
+elephant 9 african elephant
+giraffe 8 turkey?
+gorilla 11 (stylized) gorilla
+hippo 12 rhinoceros
+horse 5 cow?
+lion 5 snail?
+rhino 19 rhinoceros

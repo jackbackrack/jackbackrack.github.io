@@ -1,0 +1,10 @@
+bear 8 Bison
+beaver 19 porcupine
+camel 9 camel
+elephant 14 elephant
+giraffe 17 giraffe
+gorilla 12 gorilla or a pro wrestler
+hippo 9 milk truck
+horse 19 dog
+lion 11 smaller dog
+rhino 20 rhinocerous

@@ -1,0 +1,10 @@
+bear 9 buffalo
+beaver 8 stegasaurus
+camel 15 camel
+elephant 8 elephant
+giraffe 15 tiger
+gorilla 11 ape
+hippo 13 hippo
+horse 12 goat
+lion 11 lion
+rhino 15 rhinocerous

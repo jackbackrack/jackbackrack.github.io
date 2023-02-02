@@ -1,0 +1,10 @@
+bear 12 unknown
+beaver 25 triceratops
+camel 15 camel
+elephant 10 elephant
+giraffe 4 baboon
+gorilla 13 gorilla
+hippo 16 tapir
+horse 12 unknown
+lion 18 lion
+rhino 17 elephant

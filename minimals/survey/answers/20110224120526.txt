@@ -1,0 +1,10 @@
+bear 7 Zebra
+beaver 8 Bantha
+camel 7 Camel
+elephant 7 Elephant
+giraffe 17 Ostrich 
+gorilla 16 Kong from Donkey Kong
+hippo 13 Hippo
+horse 14 cow
+lion 10 dog
+rhino 13 dog

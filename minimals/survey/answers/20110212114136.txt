@@ -1,0 +1,10 @@
+bear 21 bear
+beaver 9 rhino
+camel 7 lama or something tall and 4 legged
+elephant 13 elephant
+giraffe 8 bird
+gorilla 5 fireplace (can\'t tell)
+hippo 10 unknown
+horse 13 heard animal with horns (bull)
+lion 7 dog
+rhino 8 rhino

@@ -1,0 +1,10 @@
+bear 12 polar bear
+beaver 25 beaver
+camel 16 camel
+elephant 8 elephant
+giraffe 16 ostrich
+gorilla 11 heffalump
+hippo 6 car
+horse 10 dog
+lion 17 sphinx
+rhino 12 bear

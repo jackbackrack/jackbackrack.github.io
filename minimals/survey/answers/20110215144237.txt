@@ -1,0 +1,2 @@
+bear 10 unknown
+beaver 19 dinosaur

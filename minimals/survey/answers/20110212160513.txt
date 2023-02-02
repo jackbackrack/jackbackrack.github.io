@@ -1,0 +1,11 @@
+bear 19 quadruped
+beaver 10 quadruped
+camel 6 ????
+elephant 11 unknown
+giraffe 8 unknown
+gorilla 4 unknown
+hippo 7 unknown
+horse 14 horse
+lion 7 unknown
+rhino 18 elephant
+rhino 18 elephant

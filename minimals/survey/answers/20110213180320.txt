@@ -1,0 +1,10 @@
+bear 15 bear
+beaver 12 slug
+camel 6 unknown
+elephant 6 moonenite
+giraffe 8 rabbit
+gorilla 6 frog
+hippo 9 unknown
+horse 6 unknown
+lion 9 unknown
+rhino 6 rifle

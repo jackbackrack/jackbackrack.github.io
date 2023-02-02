@@ -1,0 +1,10 @@
+bear 6 elephant
+beaver 14 dinosaur
+camel 6 cat (sitting)
+elephant 16 elephant
+giraffe 17 giraffe or emu...with an extra leg?
+gorilla 16 ape
+hippo 8 elephant
+horse 7 dog
+lion 17 lion
+rhino 11 elephant or boar

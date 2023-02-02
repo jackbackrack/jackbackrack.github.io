@@ -1,0 +1,11 @@
+bear 14 buffalo
+beaver 19 armadillo
+camel 4 girrafe
+elephant 10 elephant
+giraffe 5 python
+giraffe 5 python
+gorilla 14 sloth
+hippo 14 cow
+horse 4 buffalo
+lion 15 dog
+rhino 19 rhino

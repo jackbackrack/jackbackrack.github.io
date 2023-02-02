@@ -1,0 +1,10 @@
+bear 13 Bear
+beaver 11 Hippo
+camel 10 Camel
+elephant 9 Elephant
+giraffe 17 Giraffe
+gorilla 11 porcupine
+hippo 11 Hippo
+horse 9 Elephant
+lion 15 Lion
+rhino 10 Muskox

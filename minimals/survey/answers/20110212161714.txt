@@ -1,0 +1,10 @@
+bear 21 bear
+beaver 4 i dont see an animal
+camel 12 dromedary
+elephant 9 elephant
+giraffe 4 a bird of sorts
+gorilla 11 gorilla!
+hippo 16 hippo
+horse 15 moose
+lion 13 ?
+rhino 8 rhino
